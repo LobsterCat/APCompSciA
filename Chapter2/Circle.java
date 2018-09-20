@@ -1,4 +1,3 @@
-package Chapter2;
 /**
  * Circle.java
  *
@@ -12,9 +11,9 @@ package Chapter2;
 public class Circle
 {
   /**
-  * main method - Print the area of a circle with two different radii
-  * @param args
-  */
+   * main method - Print the area of a circle with two different radii
+   * @param args
+   */
   public static void main(String[] args)
   {
     // constant variable for the value of PI
@@ -23,15 +22,35 @@ public class Circle
     // variable declarations and initializations to calculate area of circle
     int iRadius = 10;
     double dArea = dPI * iRadius * iRadius;
+    double dAreaTwo, dCircumferenceTwo;
+    
+    //variable declaration and initialization for the growths of the area and circumference
+    double dAreaGrowth, dCircumferenceGrowth;
+    
+    // variable declaration and initialization for calculating circumference
+    double dCircumference = 2 * dPI * iRadius;
 
     // print the information for the first circle
     System.out.println("The area of a circle with radius " + iRadius +
       " is " + dArea);
+    System.out.println("The circumference of a circle with radius " + iRadius + " is " + dCircumference);
 
-    // change the radius and print the information for the second circle
+    // change the radius, area and circumference and making new variables
     iRadius = 20;
-    dArea = dPI * iRadius * iRadius;
+    dAreaTwo = dPI * iRadius * iRadius;
+    dCircumferenceTwo = 2 * dPI * iRadius;
+    
+    // printing the second circle's values
     System.out.println("The area of a circle with radius " + iRadius +
-      " is " + dArea);
+      " is " + dAreaTwo);
+    System.out.println("The circumference of a circle with radius " + iRadius + " is " + dCircumferenceTwo);
+    
+    // setting the variable for the growth of the area and circumference
+    dAreaGrowth = dArea / dAreaTwo;
+    dCircumferenceGrowth = dCircumference / dCircumferenceTwo;
+    
+    // printing the growth in area and the growth in circumference
+    System.out.println("The growth of the area is " + dAreaGrowth);
+    System.out.println("The growth of the circumference is " + dCircumferenceGrowth);
   }
 }
