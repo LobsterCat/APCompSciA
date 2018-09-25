@@ -21,10 +21,11 @@ public class ExpressionsLab
     // initializing all of the integers that will be used to test my answers
 	// in the 2.4 Lab
     int iDiameter, iResult, iBase, iWeight, iNumOne, iNumTwo, result;
+    int tre;
 
     // initializing all of the doubles required to test my answers
     // from the 2.4 Lab 
-    double dResult, dValOne, dValTwo; 
+    double dResult, dValOne, dValTwo, value; 
     
     // testing questions 1-3 and comparing my answers
     iDiameter = 5;
@@ -45,9 +46,9 @@ public class ExpressionsLab
     // checking answers for questions 5 and 6
     // if a line of code is commented out, then it failed to compile
     result = ( 5 + 2 );
-    //result = ( 5 + 2 * (15 - 3);
-    //result = ( 5 + 2 (;
-    //result = ( 5 + 2 ( 4 ) );
+    // result = ( 5 + 2 * (15 - 3);
+    // result = ( 5 + 2 (;
+    // result = ( 5 + 2 ( 4 ) );
     System.out.println();
     System.out.println("Answers for Number 6");
     System.out.println(iResult = 27);
@@ -55,5 +56,38 @@ public class ExpressionsLab
     System.out.println(iResult = iResult / 7);
     System.out.println(iResult = iResult * 2);
     
+    // using the pre-defined variables to check if my calculations were
+    // correct for number 7
+    System.out.println();
+    System.out.println("Answers for Number 7");
+    // these don't compile being set as null
+    // System.out.println(iBase); 
+    // System.out.println(iResult);
+    System.out.println(iBase = 5);
+    System.out.println(iResult = iBase + 3);
+    System.out.println(iBase = 7);
+    
+    // checking answers for if the value will change from int to double
+    // for questions 10 and 11
+    value = 0.0;
+    System.out.println();
+    System.out.println("Questions 10 and 11 Checks");
+    // System.out.println(result = value);
+    System.out.println(value = (int) result);
+    
+    // question 12 had various equations combining the use of integers
+    // and doubles so this will be a good check to see if my answers
+    // were the correct values as well as the correct numbers
+    iNumOne = 17;
+    iNumTwo = 5;
+    dValOne = 12.0;
+    dValTwo = 2.34;
+    System.out.println();
+    System.out.println("Question 12 Answers");
+    System.out.println(iResult = iNumOne / iNumTwo);
+    System.out.println(dResult = iNumOne / iNumTwo);
+    System.out.println(dResult = dValOne / iNumTwo);
+    System.out.println(dResult = (double) iNumOne / iNumTwo);
+    System.out.println(iResult = (int) dValOne / iNumTwo);
   }
 }
