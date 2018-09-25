@@ -1,9 +1,10 @@
 /**
  * ExpressionsLab.java
  *
- * Code Description: This is the place where you will give a reasonable
- * amount of information about your code that helps the reader understand
- * what the code should do.
+ * Code Description: I declare all of the variables used in the 2.4 Lab Questions
+ * and then I do various calculations with the numbers provided in the lab. This
+ * allows me to compare the answers I chose with the answers that the java compiler
+ * would actually output.
  *    
  * @author Jacob Robbins
  * @version 9/25/18
@@ -13,7 +14,9 @@
 public class ExpressionsLab
 {
   /**
-   * main method - 
+   * main method -  The main method is used for declaring all of the variables that
+   *     			are used in the lab and then prints values to the console
+   *     			that simulate how the java compiler would solve the equations.
    * @param args
    */
   public static void main (String[] args)
@@ -21,7 +24,6 @@ public class ExpressionsLab
     // initializing all of the integers that will be used to test my answers
 	// in the 2.4 Lab
     int iDiameter, iResult, iBase, iWeight, iNumOne, iNumTwo, result;
-    int tre;
 
     // initializing all of the doubles required to test my answers
     // from the 2.4 Lab 
