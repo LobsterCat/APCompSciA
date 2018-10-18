@@ -78,6 +78,8 @@ public class StringManipulation
     System.out.println("Now enter the city you live in: ");
     sCity = kb.nextLine();
 
+    // prints user's state in all caps twice
+    // prints user's city in lowercase in between
     System.out.println(
         sState.toUpperCase() + sCity.toLowerCase() + sState.toUpperCase());
 
