@@ -76,6 +76,7 @@ public class CounterTest
         System.out.println("Now enter an integer to add to the counter.");
         iInput = kb.nextInt();
         counterOne.click(iInput);
+        System.out.println("The counter is now at: " + counterOne.getCount());
       }
       else if (sInput.equalsIgnoreCase("Reset"))
       {
