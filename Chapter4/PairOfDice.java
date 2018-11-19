@@ -12,7 +12,7 @@
 public class PairOfDice
 {
 
-  private DieV2 dieOne, dieTwo;
+  private Die dieOne, dieTwo;
 
   /**
    * constructor - creates two object reference variables of the diev2 class
@@ -21,8 +21,8 @@ public class PairOfDice
    */
   public PairOfDice()
   {
-    dieOne = new DieV2();
-    dieTwo = new DieV2();
+    dieOne = new Die();
+    dieTwo = new Die();
   }
 
   /**
@@ -34,6 +34,19 @@ public class PairOfDice
   public int roll()
   {
     return dieOne.roll() + dieTwo.roll();
+  }
+  
+  /**
+   * toString - Converts the integer to a String
+   * 
+   * @param
+   */
+  public String toString()
+  {
+    String sCount = Integer.toString();
+    return sCount; // returns the string version of the variable
+    
+
   }
 
 }
