@@ -14,12 +14,12 @@ public class Die
   private final int iMAX = 6;
 
   // declare current value showing on the die
-  private int iFaceValue; 
+  private int iFaceValue;
 
   /**
    * Constructor - Sets the initial face value
    * 
-   * @param 
+   * @param
    */
   public Die()
   {
@@ -29,7 +29,7 @@ public class Die
   /**
    * roll - Rolls the die and returns the result
    * 
-   * @param 
+   * @param
    */
   public int roll()
   {
@@ -40,7 +40,7 @@ public class Die
   /**
    * setFaceValue - Face value mutator
    * 
-   * @param 
+   * @param
    */
   public void setFaceValue(int iValue)
   {
@@ -50,7 +50,7 @@ public class Die
   /**
    * getFaceValue - Face value accessor
    * 
-   * @param 
+   * @param
    */
   public int getFaceValue()
   {
@@ -60,12 +60,12 @@ public class Die
   /**
    * toString - Returns a string representation of this die
    * 
-   * @param 
+   * @param
    */
   public String toString()
   {
     String sResult = Integer.toString(iFaceValue);
-
     return sResult;
   }
+
 }
