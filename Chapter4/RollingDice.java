@@ -9,7 +9,7 @@
  * @contact teinolf@palisadessd.org
  */
 
-public class RollingDiceV2
+public class RollingDice
 {
   /**
    * main method - creates two Die objects (using the Die class) and rolls them
@@ -21,12 +21,12 @@ public class RollingDiceV2
   {
     // declare object reference variables for the dice.
     // and a variable for the roll total
-    DieV2 dieOne, dieTwo;
+    Die dieOne, dieTwo;
     int iSum;
 
     // instantiate the two Die objects
-    dieOne = new DieV2();
-    dieTwo = new DieV2();
+    dieOne = new Die();
+    dieTwo = new Die();
 
     // invoke methods (that are defined in the Die class)
     // to roll the dice, then print the results
