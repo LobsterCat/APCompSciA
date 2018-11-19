@@ -8,7 +8,7 @@
  * @contact teinolf@palisadessd.org
  */
 
-public class DieV2
+public class Die
 {
   // set maximum face value
   private final int iMAX = 6;
@@ -21,7 +21,7 @@ public class DieV2
    * 
    * @param 
    */
-  public DieV2()
+  public Die()
   {
     iFaceValue = 1;
   }
