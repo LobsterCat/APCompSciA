@@ -32,7 +32,7 @@ public class Counter
   public int click(int iIncrement)
   {
     iCount += iIncrement;
-    return iCount;
+    return iCount; // returns the counter integer
   }
 
   /**
@@ -42,7 +42,7 @@ public class Counter
    */
   public int getCount()
   {
-    return iCount;
+    return iCount; // returns the counter integer
   }
 
   /**
@@ -63,10 +63,10 @@ public class Counter
   public String toString()
   {
     String sCount = Integer.toString(iCount);
-    return sCount;
+    return sCount; // returns a string version of iCount
 
   }
-  
+
   /**
    * increment - Increases the counter by one
    * 
@@ -75,7 +75,7 @@ public class Counter
   public int increment()
   {
     iCount++;
-    return iCount;
+    return iCount; // returns the count integer
   }
 
 }
