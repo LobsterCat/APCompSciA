@@ -35,7 +35,7 @@ public class PairOfDice
   {
     return dieOne.roll() + dieTwo.roll();
   }
-  
+
   /**
    * toString - Converts the integer to a String
    * 
@@ -43,10 +43,37 @@ public class PairOfDice
    */
   public String toString()
   {
-    String sCount = Integer.toString();
-    return sCount; // returns the string version of the variable
-    
+    String sCount = Integer.toString(dieOne.roll());
+    String sCountTwo = Integer.toString(dieTwo.roll());
+    return sCount + (" ") + sCountTwo; // returns the string version of the die
+                                       // roll
+  }
 
+  /**
+   * sum - roll the dice and return the sum of the face values
+   * 
+   * @param
+   */
+  public int sum()
+  {
+    int iSum;
+    iSum = dieOne.roll() + dieTwo.roll();
+    return iSum;
+  }
+
+  /**
+   * setFaceValues - set the face value of each die essentially setting the sum
+   * as well
+   * 
+   * @param iFaceValueOne - sets the value for die one
+   * @param iFaceValueTwo - sets the value for die two
+   * @return 
+   */
+  public String setFaceValues(int iFaceValueOne, int iFaceValueTwo)
+  {
+    dieOne.setFaceValue(iFaceValueOne);
+    dieTwo.setFaceValue(iFaceValueTwo);
+    return "Die One: " + dieOne + "Die Two: " + dieTwo;
   }
 
 }
