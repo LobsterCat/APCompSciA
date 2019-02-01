@@ -40,13 +40,16 @@ public class SumEvens
           "Please enter a positive integer greater than 2 (0 to quit): ");
       iInput = kb.nextInt();
 
+      // checks first to see if the user inputs a value of 2 or higher
       if (iInput >= 2)
       {
+        // then loops until the sum of all even numbers between the 
+        // user input has been calculated
         for (iL = 2; iL <= iInput; iL += 2)
         {
           iSum += 2 * iL / 2;
         }
-        System.out.println("From 2 to " + iInput + " yields a sum of: " + iSum);
+        System.out.println("All even numbers from 2 to " + iInput + " yields a sum of: " + iSum);
       }
       else
       {
