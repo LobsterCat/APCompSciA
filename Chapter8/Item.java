@@ -5,7 +5,7 @@
 // Represents an item in a shopping cart.
 // ***************************************************************
 import java.text.NumberFormat;
-public class Item
+public class Item 
 {
   // instance variables declared
   private String sName;
