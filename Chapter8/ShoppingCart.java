@@ -57,6 +57,6 @@ public class ShoppingCart
 
     sContents += "\nTotal Price: " + fmtCurrency.format(dTotalPrice);
     sContents += "\n";
-    return sContents;
+    return sContents; 
   }
 }
