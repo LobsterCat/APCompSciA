@@ -22,8 +22,12 @@ public class ShoppingCart
   public void addToCart(String sItemName, double dPrice, int iQuantity) 
     // Adds an item to the shopping cart.
   {
+    if(iItemCount == iCapacity) 
+      increaseSize();
     
-    // add the itmes mannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+    iItemCount++;
+    cart[iItemCount - 1] = new Item(sItemName, dPrice, iQuantity);
+    // add the items somehow
     
   }
 
@@ -43,6 +47,12 @@ public class ShoppingCart
     
   }
 
+  public double totalPrice() {
+    for()
+    dTotalPrice += dPrice[];
+    return dTotalPrice;
+  }
+  
   public String toString() 
   // Returns the contents of the cart together with summary information.
   {
@@ -57,6 +67,6 @@ public class ShoppingCart
 
     sContents += "\nTotal Price: " + fmtCurrency.format(dTotalPrice);
     sContents += "\n";
-    return sContents; 
+    return sContents;
   }
 }
