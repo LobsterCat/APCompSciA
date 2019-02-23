@@ -11,6 +11,7 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
  * @contact 1002127@palisadessd.net
  */
 import java.util.Scanner; //imports Scanner object
+import java.text.NumberFormat; // imports Decimal Format
 
 public class Shopping
 {
@@ -26,14 +27,17 @@ public class Shopping
   {
 
     int iTotalCost; // total cost
+    boolean bFlag = true; // used to loop the prompting in the program
     Scanner kb = new Scanner(System.in); // initializes Scanner
     String sCommand; // for user input
-    ShoppingCart cart1 = new ShoppingCart(); // creates a cart
+    ShoppingCart CartOne = new ShoppingCart(); // creates a cart
+    NumberFormat fmtCurrency = NumberFormat.getCurrencyInstance(); // rounds decimals for total price
 
     // tells user what commands to input
     System.out.println(
         "Welcome to the shopping cart simulator. Here you start with a cart "
             + "that can hold 5 items, but the size will automatically increase as needed.");
+
     System.out
         .println("-----------------------------------------------------------");
     System.out.println("                         COMMANDS");
@@ -46,23 +50,47 @@ public class Shopping
     System.out.println(
         "STOP                        Ends the program and reads your final cart contents");
 
-    sCommand = kb.nextLine();
-
-    switch (sCommand)
+    while (bFlag)
     {
-    case "CART":
-      System.out.println(cart1.toString());
-      break;
-    case "ADD":
-      System.out.println(
-          "Now type the item name, it's price, and how many you are buying.");
-      cart1.addToCart(kb.nextLine(), kb.nextDouble(), kb.nextInt());
-      break;
-    case "PAY":
-      System.out.println("You owe: " + cart1.);
+      System.out.println();
+      System.out.print("Now type a command in all capital letters. Type \"HELP\" to see a list"
+          + " or refer to the one above.");
+      
+      sCommand = kb.next(); // reads the command the user inputs
 
+      switch (sCommand)
+      {
+      case "CART":
+        CartOne.totalPrice();
+        System.out.println(CartOne.toString());
+        break;
+      case "ADD":
+        System.out.println(
+            "Now type the item name, it's price, and how many you are buying.");
+        CartOne.addToCart(kb.nextLine(), kb.nextDouble(), kb.nextInt());
+        break;
+      case "PAY":
+        System.out.println("You owe: " + fmtCurrency.format(CartOne.totalPrice()));
+        break;
+      case "STOP":
+        System.out.println("Ending the program.");
+        bFlag = false;
+      case "HELP":
+        System.out.println(
+            "-----------------------------------------------------------");
+        System.out.println("                         COMMANDS");
+        System.out.println(
+            "CART                        Checks the contents of the cart");
+        System.out
+            .println("ADD                         Adds a new item to the cart");
+        System.out
+            .println("PAY                         Calculates your total owed");
+        System.out.println(
+            "STOP                        Ends the program and reads your final cart contents");
+        CartOne.totalPrice();
+
+      }
     }
-
     kb.close(); // closes Scanner object
   }
 
