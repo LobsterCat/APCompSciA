@@ -38,7 +38,7 @@ public class Item
   public String toString () // Return a string with the information about the item
   {
     NumberFormat fmtCurrency = NumberFormat.getCurrencyInstance();
-    return (sName + "\t" + fmtCurrency.format(dPrice) + "\t" + iQuantity + "\t"
+    return (sName + "\t" + "\t" + fmtCurrency.format(dPrice) + "\t" + "\t" + iQuantity + "\t"+ "\t"
       + fmtCurrency.format(dPrice * iQuantity));
   }
 }
